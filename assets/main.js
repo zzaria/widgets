@@ -137,6 +137,7 @@ function factorize(){
     }
 
     let primes = pollardsRhoPrimeFactor(X)
+    prime = primes.sort((a, b) => {return a-b})
 
     function getProduct(total, num) {
         return total*num;
