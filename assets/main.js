@@ -149,7 +149,7 @@ function factorize(){
         return ret
     }
     let primes = pollardsRhoPrimeFactor(X)
-    primes.sort((a, b) => {return a==b? 0: a>b? 1:-1})
+    primes.sort((a, b) => a==b? 0: a>b? 1:-1)
 
     function getProduct(total, num) {
         return total*num;
@@ -160,7 +160,7 @@ function factorize(){
     )
 
     function unique(a) {
-        return a.sort((a, b) => {return a==b? 0: a>b? 1:-1} ).filter(function(value, index, array) {
+        return a.sort((a, b) => a==b? 0: a>b? 1:-1 ).filter(function(value, index, array) {
             return (index === 0) || (value !== array[index-1])
         })
     }
