@@ -1,5 +1,23 @@
-function stringReverser(){
-	document.getElementById("string-reverser-out").value=document.getElementById("string-reverser-in").value.split('').reverse().join('');
+function convertCapitalization(){
+    var text=document.getElementById("in").value,output;
+	document.getElementById("out1").innerHTML=text.toUpperCase();
+    document.getElementById("out2").innerHTML=text.toLowerCase();
+    output="";
+    for(let i=0;i<text.length;i++){
+        var c=text.charCodeAt(i);
+        if(65<=c&&c<=90) c+=32;
+        else if(97<=c&&c<=122) c-=32;
+        output+=String.fromCharCode(c); console.log(output);
+    }
+    document.getElementById("out3").innerHTML=output; 
+    output="";
+    for(let i=0;i<text.length;i++){
+        var c=text.charAt(i);
+        if(i&1) output+=c.toLowerCase();
+        else output+=c.toUpperCase();
+    }
+    document.getElementById("out4").innerHTML=output;
+    document.getElementById("out5").innerHTML=text.split('').reverse().join('');
 }
 function caesarCipher(){
 	var s=document.getElementById("caesar-cipher-in").value,shift=parseInt(document.getElementById("caesar-cipher-shift").value),cipher="";
@@ -7,21 +25,21 @@ function caesarCipher(){
 		var c=s.charCodeAt(i);
 		if(65<=c&&c<=90) c=((c-65+shift)%26+26)%26+65;
 		else if(97<=c&&c<=122) c=((c-97+shift)%26+26)%26+97;
-		if(48<=c&&c<=57) c=((c-48+shift)%10+10)%10+48;
-		cipher=cipher.concat(String.fromCharCode(c));
+		else if(48<=c&&c<=57) c=((c-48+shift)%10+10)%10+48;
+		cipher+=String.fromCharCode(c);
 	}
 	document.getElementById("caesar-cipher-out1").innerHTML=cipher; cipher="";
 	if(!isNaN(shift)) for(var i=0;i<s.length;i++){
 		var c=s.charCodeAt(i);
 		if(65<=c&&c<=90) c=((c-65+shift)%26+26)%26+65;
 		else if(97<=c&&c<=122) c=((c-97+shift)%26+26)%26+97;
-		cipher=cipher.concat(String.fromCharCode(c));
+		cipher+=String.fromCharCode(c);
 	}
 	document.getElementById("caesar-cipher-out2").innerHTML=cipher; cipher="";
 	if(!isNaN(shift)) for(var i=0;i<s.length;i++){
 		var c=s.charCodeAt(i);
 		if(48<=c&&c<=57) c=((c-48+shift)%10+10)%10+48;
-		cipher=cipher.concat(String.fromCharCode(c));
+		cipher+=String.fromCharCode(c);
 	}
 	document.getElementById("caesar-cipher-out3").innerHTML=cipher;
 }

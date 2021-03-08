@@ -15,16 +15,14 @@
 			<a href="https://aaerialys.me"><img src="assets/images/logo.ico" alt="logo"></a>
 		</header>
 		<div class="main">
-			<h1>Widgets</h1>
-			<p>Small programs written using Javascript.</p>
-			<ul class="widgets">
-				<li><a href="convert-capitalization.html">Convert Capitalization</a></li>
-				<li><a href="caesar-cipher.html">Caesar Cipher</a></li>
-				<li><a href="factorize.html">Factorize</a></li>
-				<li><a href="next-prime.html">Next/Last Prime</a></li>
-				<li><a href="same-millisecond-button-press.html">Same-Millisecond Button Press Challenge</a></li>
-				<li><a href="gcd.html">GCD and LCM</a></li>
-			</ul>
+			<a href="index.html">Back</a>
+			<h1>GCD and LCM</h1>
+			<p>Finds GCD (greatest common divisor) and LCM (least common multiple) of all numbers entered.</p>
+			<input type="text" id="next-prime-in" onchange="findGCD()"></input>
+			<p>GCD:</p>
+			<p id="out1"></p>
+			<p>LCM:</p>
+			<p id="out2"></p>
 		</div>
 		<footer>
 			<a href="https://github.com/Aaerialys/widgets"><i class="fab fa-github"></i></a>
@@ -33,4 +31,23 @@
 			</div>
 		</footer>
 	</body>
+	<script src="assets/main.js"></script>
+	<script>
+		function findGCD(){
+			var input = document.getElementById("next-prime-in").value+" ",last=0,ans=0n,product=1n,x;
+			for(var i=0;i<input.length;i++){
+				var c=input.charCodeAt(i);
+				if(c<48||57<c){
+					if(last<i){
+						x=BigInt(input.substring(last,i)); 
+						ans=gcd(ans,x);
+						product*=x/gcd(product,x);
+					}
+					last=i+1;
+				}
+			} 
+			document.getElementById("out1").innerHTML=ans;
+			document.getElementById("out2").innerHTML=product;
+		}
+	</script>
 </html>

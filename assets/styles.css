@@ -28,6 +28,10 @@ body{
 .hidden {
 	display:none !important;
 }
+textarea{
+	width:80%;
+	height: 10em;
+}
 
 /****header****/
 header{
