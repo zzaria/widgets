@@ -163,7 +163,6 @@ function factorize(){
                 q.push(y/q.back())
             }
         }
-        ret.sort()
         return ret
     }
     let primes = pollardsRhoPrimeFactor(X)
