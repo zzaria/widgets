@@ -1,2 +1,3 @@
 # widgets
-small programs written in javascript
+A collection of miscellaneous programs.
+
