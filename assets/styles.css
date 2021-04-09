@@ -33,7 +33,7 @@ textarea{
 	height: 10em;
 }
 .largeInput{
-	width:500px;
+	width:80%;
 	display: block
 }
 
@@ -109,8 +109,8 @@ footer a{
 	padding:0px;
 }
 .widgets li{
-	height: 50px;
 	margin:0px;
+	padding:5px;
 	background-color:#fef8ff;
 }
 .widgets li+li{
@@ -120,5 +120,20 @@ footer a{
 	font-size:20px;
 	padding:10px;
 	margin:auto;
+	color:slategrey;
 	display: inline-block;
+}
+
+/***tictactoe***/
+.tttcell{
+	width:75px;
+	height:75px;
+	border:1px solid black;
+	display:inline-block;
+	font-size:50px;
+    text-align: center;
+    vertical-align: top;
+}
+.tttboard{
+	width:231px;
 }
