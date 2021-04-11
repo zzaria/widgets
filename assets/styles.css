@@ -102,7 +102,7 @@ footer a{
 .main{
 	margin:auto;
 	width:70%;
-	padding:100px 40px;
+	padding:80px 40px;
 }
 .widgets{
 	list-style-type:none;
@@ -136,4 +136,8 @@ footer a{
 }
 .tttboard{
 	width:231px;
+}
+
+canvas{
+	border:1px solid black;
 }
