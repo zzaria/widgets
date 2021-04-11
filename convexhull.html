@@ -130,7 +130,7 @@
 		function genRandom(){
 			n=Math.random()*10,p=[]; n=Math.floor(n*n)+1;
 			for(let i=0;i<n;i++)
-				p.push([Math.floor(Math.random()*W),Math.floor(Math.random()*H),Math.floor(Math.random()*W/50-W/100),Math.floor(Math.random()*H/50-H/100)]);
+				p.push([Math.floor(Math.random()*W),Math.floor(Math.random()*H),Math.random()*W/50-W/100,Math.random()*H/50-H/100]);
 			genHull();
 		}
 		function beginDrag(e){
@@ -153,8 +153,9 @@
 			genHull();
 		}
 		function createDot(e){
+			console.log(1);
 			var x=e.x-canvas.offsetLeft,y=e.y-canvas.offsetTop;
-			p.push([x,y,0,0]); n++;
+			p.push([x,y,Math.random()*W/50-W/100,Math.random()*H/50-H/100]); n++;
 			genHull();
 		}
 		function eraseDot(e){
