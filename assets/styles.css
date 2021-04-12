@@ -36,6 +36,9 @@ textarea{
 	width:80%;
 	display: block
 }
+.smallInput{
+	width:3em;
+}
 
 /****header****/
 header{
