@@ -169,8 +169,8 @@
 			n=p.length;
 			genHull();
 		}
-		function mouseOption(){
-			mouseType=event.target.value;
+		function mouseOption(e){
+			mouseType=e.target.value;
 			if(mouseType==="drag"){
 				canvas.onmousedown=beginDrag;
 				canvas.onmouseup=endDrag;
@@ -213,8 +213,8 @@
 			}
 			genHull();
 		}
-		function moveOption(){
-			moveType=event.target.value;
+		function moveOption(e){
+			moveType=e.target.value;
 		}
 	</script>
 </html>

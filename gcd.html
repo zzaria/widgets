@@ -34,17 +34,11 @@
 	<script src="assets/main.js"></script>
 	<script>
 		function findGCD(){
-			var input = document.getElementById("next-prime-in").value+" ",last=0,ans=0n,product=1n,x;
+			var input = document.getElementById("next-prime-in").value.split(/\D+/g),last=0,ans=0n,product=1n,x;
 			for(var i=0;i<input.length;i++){
-				var c=input.charCodeAt(i);
-				if(c<48||57<c){
-					if(last<i){
-						x=BigInt(input.substring(last,i)); 
-						ans=gcd(ans,x);
-						product*=x/gcd(product,x);
-					}
-					last=i+1;
-				}
+				x=BigInt(input[i]); 
+				ans=gcd(ans,x);
+				product*=x/gcd(product,x);
 			} 
 			document.getElementById("out1").innerHTML=ans;
 			document.getElementById("out2").innerHTML=product;

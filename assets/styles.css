@@ -19,6 +19,7 @@ html{
 	position:relative;
 }
 h1,h2,h3{
+	margin-top: 0;
 	font-weight:500;
 }
 body{
