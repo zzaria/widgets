@@ -84,7 +84,6 @@
         ]),
         stepNumber: history.length,
         xIsNext: !this.state.xIsNext,
-        computerMove:0,
       });
     }
     handleClick(i) {
