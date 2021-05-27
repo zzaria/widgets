@@ -210,7 +210,7 @@
     	}
       return (
         <div className="game">
-            <div>{status}</div>
+          <div>{status}</div>
   	      <div className="tttboard">
   	      	{board}
   	      </div>
