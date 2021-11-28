@@ -34,7 +34,12 @@
 			<button onclick="genHull(true)">Regenerate Hull</button>
 
 			<canvas id="canvas"></canvas>
-			<p>Gift wrapping/minimum enclosing fence. Uses O(nlogn) convex hull algorithm.</p>
+			<p>
+				Gift wrapping/minimum enclosing fence. Uses O(nlogn) convex hull algorithm.
+				Click Regenerate Hull while in Frozen mode to see the algorithm run.
+				In Elastic mode, the hull tries to contract, applying a force like a real rubber band.
+				You can also drag the dots around.
+			</p>
 		</div>
 		<footer>
 			<a href="https://github.com/zzaria/widgets"><i class="fab fa-github"></i></a>
@@ -51,7 +56,9 @@
 		canvas.onmousedown=beginDrag;
 		canvas.onmouseup=endDrag;
 		setInterval(move,10);
-		genRandom();
+		while(n<5){
+			genRandom();
+		}
 		function sleep(ms) {
 		  return new Promise(resolve => setTimeout(resolve, ms));
 		}
