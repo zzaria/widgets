@@ -34,8 +34,9 @@
 				<input class="smallInput" type="number" onchange="updLineWidth(event)">
 				Style:
 				<select onchange="updLineStyle(event)">
-					<option value="twist">3D</option>
+					<option value="twisted">3D</option>
 					<option value="flat">Flat</option>
+					<option value="samewidth">Same Width</option>
 				</select>
 				<select onchange="updLineColor(event)">
 					<option value="black">Black</option>
@@ -163,14 +164,17 @@
 		function drawLine(line){
 			var polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon"),c=randColor();
 			cnt++;
-			if(lineStyle==="flat"){
+			if(lineStyle==="flat" || lineStyle==="samewidth"){
 				var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
 				newLine.setAttribute('x1',line[0][0]);
 				newLine.setAttribute('y1',line[0][1]);
 				newLine.setAttribute('x2',line[1][0]);
 				newLine.setAttribute('y2',line[1][1]);
 				newLine.style['stroke']=c;
-				newLine.style['stroke-width']=lineWidth*Math.random();
+				if(lineStyle==="samewidth")
+					newLine.style['stroke-width']=lineWidth;
+				else
+					newLine.style['stroke-width']=lineWidth*Math.random();
 				svg.appendChild(newLine);
 				return;
 			}
