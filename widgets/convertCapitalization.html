@@ -1,0 +1,39 @@
+---
+layout: widget
+---
+<div class="main">
+	<h1>Capitalization Converter</h1>
+	<p>Converts text to uppercase or lowercase.</p>
+	<div x-data="{inputText:''}">
+		<textarea x-model="inputText"></textarea>
+		<p>Uppercase:</p>
+		<p x-text="inputText.toUpperCase()"></p>
+		<p>Lowercase:</p>
+		<p x-text="inputText.toLowerCase()"></p>
+		<p>Inverted:</p>
+		<p x-text="invert(inputText)"></p>
+		<p>Alternating:</p>
+		<p x-text="alternating(inputText)"></p>
+	</div>
+</div>
+<script>
+	invert=(text)=>{
+		let output='';
+		for(let i=0;i<text.length;i++){
+			var c=text.charCodeAt(i);
+			if(65<=c&&c<=90) c+=32;
+			else if(97<=c&&c<=122) c-=32;
+			output+=String.fromCharCode(c);
+		}
+		return output;
+	}
+	alternating=(text)=>{
+		let output='';
+		for(let i=0;i<text.length;i++){
+			var c=text.charAt(i);
+			if(i&1) output+=c.toLowerCase();
+			else output+=c.toUpperCase();
+		}
+		return output;
+	}
+</script>

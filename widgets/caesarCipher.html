@@ -1,0 +1,32 @@
+---
+layout: widget
+---
+<h1>Caesar Cipher</h1>
+<p>The caesar cipher encrypts a string by shifting all its characters by some amount. For example, a shift of 1 would
+	replace A with B, B with C, ... and Z with A. Because this cipher is so simple it is easily decoded and not
+	recommended for security purposes.</p>
+<div x-data="{inputText:'',shift:0}">
+	<label for="caesar-cipher-in">Input:</label>
+	<input type="text" x-model="inputText">
+	<label for="caesar-cipher-shift">Shift:</label>
+	<input type="number" x-model="shift">
+	<p>Output:</p>
+	<p x-text="caesarCipher(inputText,shift,1)"></p>
+	<p>Output With Shifted Letters Only:</p>
+	<p x-text="caesarCipher(inputText,shift,2)"></p>
+	<p>Output With Shifted Numbers Only:</p>
+	<p x-text="caesarCipher(inputText,shift,3)"></p>
+<div x-data="{inputText:''}">
+<script>
+function caesarCipher(s,shift,type){
+	let cipher="";
+	if(!isNaN(shift)) for(var i=0;i<s.length;i++){
+		var c=s.charCodeAt(i);
+		if(65<=c&&c<=90&&type!=3) c=((c-65+shift)%26+26)%26+65;
+		else if(97<=c&&c<=122&&type!=3) c=((c-97+shift)%26+26)%26+97;
+		else if(48<=c&&c<=57&&type!=2) c=((c-48+shift)%10+10)%10+48;
+		cipher+=String.fromCharCode(c);
+	}
+	return cipher;
+}
+</script>
