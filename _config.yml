@@ -28,7 +28,7 @@ baseurl: "widgets" # the subpath of your site, e.g. /blog
 url: "https://zzaria.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
