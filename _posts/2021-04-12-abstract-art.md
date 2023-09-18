@@ -14,3 +14,9 @@ See the rasterized version for fewer customization options but better performanc
 [Vector version]({{'/widgets/abstract-art.html' | relative_url}})
 
 [Raster version]({{'/widgets/abstract-art-fast.html' | relative_url}})
+
+## Gallery
+![Example]({{'/assets/images/abstract-art-1.png' | relative_url}})
+![Example]({{'/assets/images/abstract-art-2.png' | relative_url}})
+![Example]({{'/assets/images/abstract-art-3.png' | relative_url}})
+![Example]({{'/assets/images/abstract-art-4.png' | relative_url}})
