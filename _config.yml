@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: aaeria
+title: The Fairylands
 author:
   email: aaeria@duck.com
   name:  aaeria
@@ -28,7 +28,7 @@ baseurl: "widgets" # the subpath of your site, e.g. /blog
 url: "https://zzaria.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -37,6 +37,7 @@ plugins:
 
 minima:
   skin: auto
+  date_format: "%-d %b, %Y"
   social_links:
     - { platform: github, user_url: "https://github.com/zzaria" }
 
