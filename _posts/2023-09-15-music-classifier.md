@@ -1,7 +1,7 @@
 ---
 author: aaeria
 ---
-I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don't think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music but was lately complaining about quality of automatic recommendations from Youtube Music, Spotify, etc, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song.
+I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don't think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music and was lately trying to find some new songs to add to their collection, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song.
 
 ## Overview
 
@@ -160,7 +160,7 @@ train_dataloader = torch.utils.data.DataLoader(
 
 test_dataloader = torch.utils.data.DataLoader(
     test_dataset,
-    batch_size=15,
+    batch_size=50,
     num_workers=2,
     shuffle=True
 )
@@ -308,7 +308,6 @@ def train(dataloader, model, loss, optimizer):
 # Create the validation/test function
 
 def test(dataloader, model):
-    size = len(dataloader.dataset)
     model.eval()
     test_loss, correct = 0, 0
 
@@ -320,8 +319,8 @@ def test(dataloader, model):
             test_loss += cost(pred, Y).item()
             correct += (pred.argmax(1)==Y).type(torch.float).sum().item()
 
-    test_loss /= size
-    correct /= size
+    test_loss /= len(dataloader)
+    correct /= len(dataloader.dataset)
 
     print(f'\nTest Error:\nacc: {(100*correct):>0.1f}%, avg loss: {test_loss:>8f}\n')
 
@@ -337,7 +336,8 @@ print('Done!')
 
 The training loss quickly approached 0, but the the testing loss did not decrease significantly. At the end, the model had 60% accuracy, barely better than random guessing. So it was clearly overfitting.
 
-I added a dropout layer after every convolutional layer other than the first, and reran the training. This time, the training loss fluctuated highly and sometimes even increased. In the end, both the training and testing performance were not great, even after increasing number of training epochs to 25.
+I added a dropout layer after every convolutional layer other than the first, and reran the training. This time, the training loss fluctuated highly and sometimes even increased. In the end, both the training and testing performance were not great.
+This was fixed by decreasing the learning rate and increasing the number of training epochs to 25, by which point the process significant slowed down.
 
 I then added more convolutional layers and decreased the learning rate. I also decided to increase the dataset through data augmentation.
 
@@ -435,12 +435,35 @@ for i in range(0,3):
 
 There are several ways to augment audio data. First, the audio can be simply shifted in time. The pitch can be slightly adjusted up or down, and the song can be sped up or slowed down by a small factor. For each song, I added two more datapoints by applying a random combination of these 3 transformations.
 
-After these changes, the model finally began learning again and in the end it had a test accuracy of about 79%.
+After these changes, the model finally began learning again. For my final attempt, I increase the training epochs to 50. After training for 2.5 hours, it had a test accuracy of about 88%.
+
+## Prediction
+```
+#predictions
+def predict(data, model):
+    model.eval()
+    test_loss, correct = 0, 0
+    with torch.no_grad():
+        for filename,(X, Y) in zip(data.imgs,data):
+            X.unsqueeze_(-1)
+            X=X.transpose(1,3)
+            X=X.to(device)
+            pred = model(X)
+            pred=pred.argmax(1)
+            print(filename,reverse_class_map[pred])
+            
+
+
+#convert to spectrogram first using data_prep
+inference_dataset = datasets.ImageFolder(root='./data/test/',transform=transforms.Compose([transforms.Grayscale(),transforms.ToTensor()]))
+predict(inference_dataset,myModel)
+
+```
 
 ## Conclusion
 
-I was still wondering if I made a huge error somewhere that was affecting the results, so I reran the training on a set of classical and electronic music and it had no trouble telling the two apart (99.7% accuracy). It's possible that one's taste in music has changed over time, so the earlier datapoints were harmful to the training.
+It's possible that one's taste in music has changed over time, so the earlier datapoints were harmful to the training.
 
-Unfortunately the performance is not as great as I had hoped. Although my program may not be good enough to create entirely new playlists for my friend to listen to, it could still act as an early filter to improve the quality of their searching results. I will have to look into that in the future.
+Unfortunately the performance is not as great as I was used to on more standard CNN tasks such as [MNIST](http://yann.lecun.com/exdb/mnist/). In addition, it required a large collection of labeled data on my friend's music preferences, which many people may not have. Still, after downloading and using the model to filter through some new songs (and listening the remaining ones myself) them I was able make several recommendations my friend enjoyed.
 
 [Source code](https://github.com/zzaria/music-classifier)
