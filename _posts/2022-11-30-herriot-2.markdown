@@ -1,4 +1,4 @@
 ---
 title:  "New Herriot is out!"
 ---
-[Herriot 2](https://herriot.tk/) is has finally been released! It a completely new technology stack (Typescript, Vue, Nuxt, Tailwind CSS, Electron, Node, Express, MongoDB) and now load faster, looks better, and has its own API. All problems have been transfered over. Coincidentally, the old version is no longer online since Heroku shut down.
+[Herriot 2](https://herriot.tk/) is has finally been released! It uses a completely new technology stack (Typescript, Vue, Nuxt, Tailwind CSS, Electron, Node, Express, MongoDB) and now load faster, looks better, and has its own API. All problems have been transfered over. Coincidentally, the old version is no longer online since Heroku shut down.
