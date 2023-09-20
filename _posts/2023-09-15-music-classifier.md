@@ -9,7 +9,7 @@ Sound is really just waves of pressure through the air, and the audio files we p
 
 Next, the data can be classified using artificial intelligence. Convolutional neural networks are a suitable model for this purpose, for the following reasons
 - The input will be a 2 dimensional spectrogram
-- The data should continuous, as the intensity of two points very close in time or frequency should be nearly the same
+- The data should be continuous, as the intensity of two points very close in time or frequency should be nearly the same
 - playing the entire song earlier or later in time does not affect how we percieve the song
 - shifting the frequency of the song by a small amount is also unlikely to affect the listening experience
 
