@@ -24,9 +24,9 @@ Some of the files were podcasts, song/album compilations, and other undesirable 
 Luckily, almost all songs had the song title and author provided in the file metadata, so I simply deleted the files without it. I also removed duplicate files with the same title and author, and deleted audio shorter than 1 minute or longer than 5 minutes. Finally, based on the filename (title and author also works), I removed songs from the full history that also appeared in the set of good songs, and chose about 1000 random remaining songs to be the 'bad' dataset.
 
 ## Processing data
-All of the files are then converted to 48khz '.wav' format using [ffmpeg](https://ffmpeg.org/). Since wav files do not have compression, the encoding process is very fast.
+All of the files are then converted to 48khz `.wav` format using [ffmpeg](https://ffmpeg.org/). Since wav files do not have compression, the encoding process is very fast.
 
-The files get placed in the 'data' folder, sorted by their classification. In this case, the folders are 'data/good/' and 'data/bad/'.
+The files get placed in the 'data' folder, sorted by their classification. In this case, the folders are `data/good/` and `data/bad/`.
 
 ## Processing data part 2
 Next, the data will be converted into spectrograms. Pytorch as 
