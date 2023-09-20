@@ -30,7 +30,7 @@
 				document.getElementById("interval").innerHTML="<span style=\"background-color:gold;\">"+dif+"</span><br>"+document.getElementsByTagName("div")[0].innerHTML;
 			}
 			else{
-				document.getElementById("interval").innerHTML="<div style=\"background-color:black; color:gold;\">"+dif+"</div><br>"+document.getElementsByTagName("div")[0].innerHTML;	
+				document.getElementById("interval").innerHTML="<div style=\"background-color:black; color:gold;\">"+dif+"</div>"+document.getElementsByTagName("div")[0].innerHTML;	
 			}
 			last[cnt++]=now;
 			while(last[last1]<now-5000) last1++;
