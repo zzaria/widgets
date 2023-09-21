@@ -5,7 +5,7 @@ An tic tac toe game with several difficulties. On the hardest difficulty it is i
 
 - There are 255 168 possible different tic tac toe games that can be played.
 - While there are 19683 combinations of Xs and Os, only 5478 of them are reachable during a game.
-- These 5478 boards can be represented as rotations or reflections of only 765 unique states.
+- These 5478 boards can be represented as rotations or reflections of only 765 unique orbits.
 
 
 
