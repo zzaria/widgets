@@ -1,0 +1,8 @@
+
+@for $i from 2 through 5 {
+    .gallery-#{$i} p{
+        display: grid;
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        gap: .5rem;
+    }
+}

@@ -16,7 +16,9 @@ See the rasterized version for fewer customization options but better performanc
 [Raster version]({{'/widgets/abstract-art-fast.html' | relative_url}})
 
 ## Gallery
+<div class="gallery-2" markdown="1">
 ![Example]({{'/assets/images/abstract-art-1.svg' | relative_url}})
 ![Example]({{'/assets/images/abstract-art-2.svg' | relative_url}})
 ![Example]({{'/assets/images/abstract-art-3.svg' | relative_url}})
 ![Example]({{'/assets/images/abstract-art-4.svg' | relative_url}})
+</div>
