@@ -469,3 +469,7 @@ Unfortunately the performance is not as great as I was used to on more standard 
 
 [Source code](https://github.com/zzaria/music-classifier)
 
+
+##Retraining for other tasks
+
+Since I already had all the code written, I wanted to see if the same model could be retrained to work for other sound classification tasks. This time, I found and downloaded a playlist of [classical music](https://www.youtube.com/playlist?list=PLCaYobZ79uQrZOWJNbtSPb2vq39LAy_pv) and [electronic music](https://www.youtube.com/playlist?list=PLa1E0oX0lRB_sbxnVBWYVQj7B3aQwD9Uk). The audio was again converted to spectrograms, without data augmentation. I then retrained the model on this data, and it had an accuracy of 99.7%. So that was definitely a success.
