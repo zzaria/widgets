@@ -468,3 +468,4 @@ It's possible that one's taste in music has changed over time, so the earlier da
 Unfortunately the performance is not as great as I was used to on more standard CNN tasks such as [MNIST](http://yann.lecun.com/exdb/mnist/). In addition, it required a large collection of labeled data on my friend's music preferences, which many people may not have. Still, after downloading and using the model to filter through some new songs (and listening the remaining ones myself) them I was able make several recommendations my friend enjoyed.
 
 [Source code](https://github.com/zzaria/music-classifier)
+
