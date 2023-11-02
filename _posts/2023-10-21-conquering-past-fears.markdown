@@ -20,9 +20,10 @@ There are definitely quite a few cases, but I don't think any of them are that h
 
 ## Canadian Computing Competition 2019 S4 - Tourism
 
-This problem was difficult compared to previous CCC problems and also contributed to my poor performance in 2019. After upsolving this problem, I was worried about whether I would be able to solve another problem like this, and in fact even in 2020 I did not expect to solve S4 despite my improvement over the last year. Eventually I remember some new test case got added that made almost everyone's solution get wrong answer, so maybe the problem is even harder. We'll see.
+This problem was difficult compared to previous CCC problems and also contributed to my poor performance in 2019. After upsolving this problem, I was worried about whether I would be able to solve another problem like this, and in fact even in 2020 I did not expect to solve S4 despite my improvement over the last year. Eventually some new test case got added that made almost everyone's solution get wrong answer, so maybe the problem is even harder. We'll see.
 
-The first thing I noticed was that my old solution which got hacked by the new test had gotten rejudged and accepted again for some reason. Anyway, I know my solution used monotonic dp transition or something, but can't you just use segment tree to calculate the minimums? With a monostack for previous maximums of course. I'll write a code to see if it works. And... it got AC. Nice.
+The first thing I noticed was that my old solution which got hacked by the new test had gotten rejudged and accepted again for some reason. Anyway, I know my solution used monotonic dp transition or something, but can't you just use a segment tree to find the best location to travel from? With a monostack for previous maximums of course. I'll write a code to see if it works. And... it got AC. Nice.
+
 <details>
     <summary>Code</summary>
     {% highlight c++%} {% raw %}
@@ -248,7 +249,7 @@ I looked at the editorial and yeah, almost all of it is trying to figure out how
 
 ## Canadian Computing Olympiad Day 2
 
-I solved none of these problems when I did the contest. But this time it wasn't because of any stupid error, the problems were just hard. After the contest, I decided to save these problems until I got better, and hopefully I'm good enough now.
+I solved none of these problems when I did the contest. But this time it wasn't because of any stupid error, the problems were just hard. After the contest, I decided to save these problems until I got better, and hopefully I'm better now.
 
 ### P4 - Travelling Merchant
 
@@ -346,7 +347,7 @@ so what is needed is $$c,d,e,f$$. $$f=K(K-1)$$, while the contribution of splitt
 	- for those points, shift x and y by a multiple of n when doing calculations
 
 ![loop town figure]({{'/assets/images/loop-town-figure.png' | relative_url}})
-*To calculate value for circled point, add +1 for each point in green box, -1 for points in red box. Note that the green boxes extend infinitely horizontally, while the the red boxes don't.*
+*To calculate value for circled point, count the points in each box and multiply by the appropriate value for that box. Note that the green boxes extend infinitely horizontally, while the the red boxes don't.*
 
 
 <details>
@@ -575,6 +576,6 @@ int main(){
 </details>
 
 ## Conclusion
-From the results of the contest and mirror, the ratings for P4, P5, P6 are estimated at 2600r, 2500r, 4200r respectively. That feels about right. Looking back, I think I might have to solved p4 or p5 during the contest back in 2021 if I spent more time on one of them and kept calm, but I definitely had no chance with p6. All problems were pretty good and interesting. Looking at the [official editorials](https://github.com/zzaria/programming-contest-resources/tree/main/other%20problems/cco21), my solution for p4 and p5 were intended, but my p6 solution was unlike any other submission on dmoj or ojuz. Speaking of loops, [this](https://www.youtube.com/watch?v=KL5QIOgzkvQ) is a very good song.
+From the results of the contest and mirror, the ratings for P4, P5, P6 are estimated at 2600r, 2500r, 4200r respectively. That feels about right. Looking back, I think I might have solved p4 or p5 during the contest back in 2021 if I spent more time on one of them and kept calm, but I definitely had no chance with p6. All problems were pretty good and interesting. Looking at the [official editorials](https://github.com/zzaria/programming-contest-resources/tree/main/other%20problems/cco21), my solution for p4 and p5 were intended, but my p6 solution was unlike any other submission on dmoj or ojuz. Speaking of loops, [this](https://www.youtube.com/watch?v=KL5QIOgzkvQ) is a very good song.
 
 Overall, this was a fun activity and it feels good to finally solve or resolve these problems from scratch.
