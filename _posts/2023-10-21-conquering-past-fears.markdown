@@ -22,7 +22,7 @@ There are definitely quite a few cases, but I don't think any of them are that h
 
 This problem was difficult compared to previous CCC problems and also contributed to my poor performance in 2019. After upsolving this problem, I was worried about whether I would be able to solve another problem like this, and in fact even in 2020 I did not expect to solve S4 despite my improvement over the last year. Eventually some new test case got added that made almost everyone's solution get wrong answer, so maybe the problem is even harder. We'll see.
 
-The first thing I noticed was that my old solution which got hacked by the new test had gotten rejudged and accepted again for some reason. Anyway, I know my solution used monotonic dp transition or something, but can't you just use a segment tree to find the best location to travel from? With a monostack for previous maximums of course. I'll write a code to see if it works. And... it got AC. Nice.
+The first thing I noticed was there were many accepted solutions despite the extra tests. Anyway, I know my solution used monotonic dp transition or something, but can't you just use a segment tree to find the best location to travel from? With a monostack for previous maximums of course. I'll write a code to see if it works. And... it got AC. Nice.
 
 <details>
     <summary>Code</summary>
