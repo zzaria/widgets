@@ -338,7 +338,7 @@ $$=e - (f - $$ #pairs where $$p_1,p_2$$ are split and $$p_1$$ is top right or bo
 
 $$= e-(f- 2 c) $$
 
-so what is needed is $$c,d,e,f$$. $$f=K(K-1)$$, while the contribution of splitting a point to $$c,d,e$$ (and thus the final number of inversions) is independent of any other points.
+so what is needed is $$c,d,e,f$$. $$f=K(K-1)$$, while the contribution to $$c,d,e$$ (and thus the final number of inversions) of splitting a point is independent of any other points.
 
 
 
