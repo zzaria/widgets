@@ -8,17 +8,22 @@ With my training nearing completion, I decided to revisit a few past problems I 
 
 1. [ccc2019s3 arithmetic square](#canadian-computing-competition-2019-s3---arithmetic-square)
 1. [ccc2019s4 tourism](#canadian-computing-competition-2019-s4---tourism)
+1. [occ](#olympiads-computing-competition)
 1. [codeforce1375i cubic lattice](#codeforces-global-9-i-1375i---cubic-lattice)
 1. [cco2021 day 2](#canadian-computing-olympiad-day-2)
 1. [conclusion](#conclusion)
 
 ## Canadian Computing Competition 2019 S3 - Arithmetic Square
 
+[Link](https://dmoj.ca/problem/ccc19s3)
+
 Doing well on the CCC was a big deal for me back in 2019, so I remember this problem well as my hopes of advancing to the next round were slowly destroyed over 3 long hours. I remember randomly filling in empty squares before realizing that this could lead to an inconsistent set of equations, then getting stuck on some cases with 3 elements filled in. Then Bruce showed me a clever order for filling them in that somehow magically solved it. Lets take another look at this problem...
 
 There are definitely quite a few cases, but I don't think any of them are that hard to solve. It would probably actually be faster to just write the code than explain everything in words. Another solution is to just write the system of equations and use elimination or something.
 
 ## Canadian Computing Competition 2019 S4 - Tourism
+
+[Link](https://dmoj.ca/problem/ccc19s4)
 
 This problem was difficult compared to previous CCC problems and also contributed to my poor performance in 2019. After upsolving this problem, I was worried about whether I would be able to solve another problem like this, and in fact even in 2020 I did not expect to solve S4 despite my improvement over the last year. Eventually some new test case got added that made almost everyone's solution get wrong answer, so maybe the problem is even harder. We'll see.
 
@@ -239,7 +244,35 @@ int main(){
 
 No need to prove anything about the transitions.
 
+## Olympiads Computing Competition
+
+[Link](https://dmoj.ca/problems/?search=occ+%2719)
+
+Never got around to solving this one.
+
+- g6
+	- centroid
+- g5
+	- k<=10 only
+	- try all 1000 max weights, for each find max vertex cover in 2^k
+- g4
+	- this is just 2d range sum
+- g3
+	- dp[l][r][c]=max value to convert [l,r] to c
+	- for interval of length x try all subintervals of length x-k+1
+- g2
+	- need to find every prefix sum p[x], in one query you can get p[x]-p[y], you already know p[0]
+	- always do either (0,x) or (x,n) query
+- g1
+    - already solved
+- s6
+	- insert cities in increasing toll, do dsu
+	- try all query ends in the smaller component, check if the other end is in the other component
+	- why is it restricted to 5 roads per city?
+
 ## Codeforces Global 9 I (1375I) - Cubic Lattice
+
+[Link](https://codeforces.com/contest/1375/problem/I)
 
 I didn't actually solve or even look at this problem before, but while I was testing the round I heard a lot about how impossible this problem was to solve and it seemed quite scary. I also wondered if I would ever be able to solve such a problem. Well, the problem was rated 4363r which was in my range last month for practice, so now seems like a good time.
 
@@ -248,6 +281,8 @@ So it's clear that the 3 vectors need to divide each respective component of eac
 I looked at the editorial and yeah, almost all of it is trying to figure out how to do GCD on quaternions. This isn't really a programming problem. Disappointing
 
 ## Canadian Computing Olympiad Day 2
+
+[Link](https://dmoj.ca/contest/cco21d2)
 
 I solved none of these problems when I did the contest. But this time it wasn't because of any stupid error, the problems were just hard. After the contest, I decided to save these problems until I got better, and hopefully I'm better now.
 
