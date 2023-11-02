@@ -8,7 +8,7 @@ With my training nearing completion, I decided to revisit a few past problems I 
 
 1. [ccc2019s3 arithmetic square](#canadian-computing-competition-2019-s3---arithmetic-square)
 1. [ccc2019s4 tourism](#canadian-computing-competition-2019-s4---tourism)
-1. [occ](#olympiads-computing-competition)
+1. [olympiads computing competition](#olympiads-computing-competition)
 1. [codeforce1375i cubic lattice](#codeforces-global-9-i-1375i---cubic-lattice)
 1. [cco2021 day 2](#canadian-computing-olympiad-day-2)
 1. [conclusion](#conclusion)
