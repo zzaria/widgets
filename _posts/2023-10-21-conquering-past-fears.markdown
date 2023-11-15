@@ -286,6 +286,8 @@ I looked at the editorial and yeah, almost all of it is trying to figure out how
 
 I solved none of these problems when I did the contest. But this time it wasn't because of any stupid error, the problems were just hard. After the contest, I decided to save these problems until I got better, and hopefully I'm better now.
 
+For each problem I have recorded my notes/thought process.
+
 ### P4 - Travelling Merchant
 
 - assume you have a strong connected component with no edges going out
@@ -340,9 +342,10 @@ editor's note: split means moving a point $$(x,y)$$ up by $$n$$, effectively "sp
 		- so two split points with this relationship will cancel out 
 	- another +2 for everything in bottom right to compensate for subtracting K(K-1) at the end
 
-editor note: 
 
-proof: first, calculate number of initial inversions before splitting any point
+editor note: proof/more detailed explanation
+
+first, calculate number of initial inversions before splitting any point
 
 a pair of points is $$(p_1=(x_1,y_1), p_2=(x_2,y_2)), p_1 \neq p_2$$
 
@@ -371,7 +374,7 @@ $$=e - ($$ #pairs where $$p_1,p_2$$ are both split - #pairs where $$p_1,p_2$$ ar
 
 $$=e - (f - $$ #pairs where $$p_1,p_2$$ are split and $$p_1$$ is top right or bottom left of $$p_2)$$
 
-$$= e-(f- 2 c) $$
+$$= e-(f- 2 c) $$ .
 
 so what is needed is $$c,d,e,f$$. $$f=K(K-1)$$, while the contribution to $$c,d,e$$ (and thus the final number of inversions) of splitting a point is independent of any other points.
 
