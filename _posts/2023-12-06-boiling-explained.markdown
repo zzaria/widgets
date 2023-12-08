@@ -3,7 +3,7 @@ author: aaeria
 ---
 
 So realized I didn't really understand how water boils. I used to think it was because the higher the temperature, the larger the fraction of molecules that had enough energy to break free.
-![diagram](assets\images\boiling-diagram.webp)
+![diagram]({{'/assets/images/boiling-diagram.webp' | relative_url}})
 
 That is true, but it means that the evaporation rate gradually increases as temperature rises. The speed wouldn't suddenly spike at the boiling point. It also doesn't explain why it isn't possible to heat water above the boiling point, or why the boiling point is dependent on pressure.
 
