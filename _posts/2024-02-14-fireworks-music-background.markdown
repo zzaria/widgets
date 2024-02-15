@@ -11,7 +11,7 @@ Here's a fireworks simulation. It's a nice decoration for holidays and syncs up 
 
 ## Behind the scenes
 
-The program times the fireworks based on when the base (volume below a certain frequency) suddenly increases. However, having too many fireworks going off all the time would be a mess, so I decided to aim for at most 2.5 firework events per second, prioritizing the heaviest beats (largest volume spikes). To do this the program checks if the current spike is within the top 5 largest in the previous 2 seconds. Then, to add more activity during exciting parts of the song, the program checks the overall volume. If it is above a threshold, the explosion size and target fire rate are increased and there is a chance to fire multiple fireworks in a single event.
+The program times the fireworks based on when the bass (volume below a certain frequency) suddenly increases. However, having too many fireworks going off all the time would be a mess, so I decided to aim for at most 2.5 firework events per second, prioritizing the heaviest beats (largest volume spikes). To do this the program checks if the current spike is within the top 5 largest in the previous 2 seconds. Then, to add more activity during exciting parts of the song, the program checks the overall volume. If it is above a threshold, the explosion size and target fire rate are increased and there is a chance to fire multiple fireworks in a single event.
 
 The firework animation is taken from [https://codepen.io/MillerTime/pen/XgpNwb](https://codepen.io/MillerTime/pen/XgpNwb).
 
