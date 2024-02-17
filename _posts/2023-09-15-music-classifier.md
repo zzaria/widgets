@@ -1,6 +1,6 @@
 ---
 author: aaeria
-title:  "Music Classifier (AI)"
+title:  "Music Classification using Convolutional Neural Network"
 ---
 I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don't think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music and was lately trying to find some new songs to add to their collection, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song.
 
