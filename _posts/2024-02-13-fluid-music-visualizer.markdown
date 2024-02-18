@@ -19,4 +19,4 @@ Here's a fluid simulation that responds to sound. It ebbs and flows in sync with
 </span>
 </div>
 
-<meta property="og:url" content="{{'/assets/images/2024-02-13d.jpg' | relative_url}}">
+<meta property="og:image" content="{{'/assets/images/2024-02-13d.jpg' | relative_url}}">
